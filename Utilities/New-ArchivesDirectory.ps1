@@ -23,7 +23,7 @@ function New-ArchivesDirectory($name){
 
     foreach($rights in @('Read', 'Modify')) {
 
-        $group  = "ACL_ATM_{0}-{1}" -f $name, $rights
+        $group  = "ACL_ARH_{0}-{1}" -f $name, $rights
         $ou     = 'OU=Archives,OU=ACL,OU=FS,OU=Security Groups,OU=Production,DC=FORSLOFF,DC=LOCAL'
 
         if($rights -eq 'Read'){
